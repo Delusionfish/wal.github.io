@@ -1,0 +1,540 @@
+			/* 页面布局 */
+			
+			/* 交互 */
+			input[type='checkbox']{
+				display: none;
+			}
+			#display:checked ~ #nav-menu{
+				right: 0;
+			}
+			
+			/* 导航栏 */
+			#nav{
+				z-index: 3;
+				width: 100%;
+				height: 90px;
+				position: fixed;
+				background-color: rgba(255, 255, 255, 0.2);
+				box-shadow: 1px 1px 40px 1px rgba(131, 131, 131, 0.5);
+				backdrop-filter: blur(30px);
+			}
+			
+			/* 导航头部 */
+			#nav-logo{
+				width: 60px;
+				height: 60px;
+				border-radius: 20px;
+				background-image: url(../img/logo/lbxx.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			#nav-logo,#nav-logo-text{/* logo */
+				font-size: 24px;
+				font-weight: 700;
+				color: rgba(132, 0, 0, 0.5);
+				
+				display: inline-block;
+				position: relative;
+				top: 10px;
+				left: 100px;
+				text-align: center;
+				
+				transition: 0.5s;
+			}
+			.nav-icon-shooter{
+				width: 30px;
+				height: 30px;
+			}
+			
+			/* 导航横栏 */
+			#nav-button{
+				width: auto;
+				height: 50px;
+				margin: 20px 0;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0px;
+				right: 100px;
+			}
+			#nav-button-style{
+				width: 65px;
+				height: 30px;
+				border-radius: 10px;
+				color: rgba(255, 255, 255, 1);
+				font-size: 16px;
+				font-weight: 600;
+				margin: 0 30px;
+				background-color: rgba(148, 148, 148, 0.5);
+				box-shadow: 3px 3px 5px 1px rgba(186, 0, 0, 0.8);	
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: 0.3s;
+			}
+			#nav-button-style::before{
+				content: "";
+				width: 0px;
+				height: 0px;
+				background: rgba(255, 0, 0, 0.5);
+				
+				position: absolute;
+				bottom: 15px;
+				transition: 0.1s;
+			}
+			#nav-button-style:hover{
+				background: rgba(103, 103, 103, 0.5);
+				box-shadow: 3px 3px 5px 1px rgba(186, 0, 0, 0.4);
+			}
+			#nav-button-style:active{
+				color: rgba(0, 0, 0, 0.6);
+				background: rgba(255, 255, 255, 0.5);
+				box-shadow: 3px 3px 5px 1px rgba(255, 0, 0, 0.4);	
+				transition: 0.1s;
+			}
+			#nav-button-style:hover::before{
+				width: 40px;
+				height: 3px;
+				border-radius: 10px;
+				background: rgba(221, 0, 0, 1.0);
+				
+				position: absolute;
+				bottom: 10px;
+			}
+			#nav-button-style:active::before{
+				width: 30px;
+				height: 3px;
+				border-radius: 10px;
+				background: rgba(0, 170, 0, 0.8);
+				transition: 0.1s;
+			}
+			
+			/* 侧边栏按钮 */
+			#menu-button{
+				position: absolute;
+				top: 25.5px;
+				right: 53px;
+				display: none;
+			}
+			.menu-icon{
+				width: 40px;
+				height: 40px;
+				/* background-color: rgba(255, 255, 255, 0.2); */
+				fill: rgba(200, 200, 200, 0.8);
+				transition: 0.3s;
+				cursor: pointer;
+			}
+			#menu-button:hover .menu-icon{
+				fill: rgba(0, 0, 0, 0.8);
+			}
+			#menu-button:active .menu-icon{
+				fill: rgba(108, 108, 108, 0.8);
+			}
+			
+			/* 侧边栏 */
+			#nav-menu{
+				z-index: 3;
+				width: 200px;
+				height: 100vh;
+				padding: 80px 20px 100px 20px;
+				background-color: rgba(255, 255, 255, 0.95);
+				box-shadow: 1px 1px 40px 2px rgba(255, 255, 255, 0.5);
+				/* backdrop-filter: blur(10px); */
+				
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 0;
+				right: -240px;
+				transition: 0.4s;
+			}
+			.menu-icon-two{
+				z-index: 10;
+				width: 40px;
+				height: 40px;
+				fill: rgba(0, 0, 0, 0.8);
+				transition: 0.3s;
+				cursor: pointer;
+			}
+			#menu-button:hover .menu-icon-two{
+				fill: rgba(0, 170, 0, 0.8);
+			}
+			#menu-button:active .menu-icon-two{
+				fill: rgba(36, 36, 36, 0.4);
+			}
+			
+			/* 侧边栏内容 */
+			#menu-style{
+				z-index: ;
+				width: 100%;
+				height: 50px;
+				padding: 10px 20px 10px;
+				margin: 5px 0;
+				color: black;
+				border-radius: 5px;
+				transition: 0.5s;
+				display: flex;
+				align-items: center;
+			}
+			#menu-style:hover{
+				background-color: rgba(159, 159, 159, 0.5);
+			}
+			#menu-style:active{
+				color: rgba(255, 255, 255, 1);
+				background-color: rgba(121, 121, 121, 0.5);
+				transition: 0.2s;
+			}
+			.behr{
+				position: relative;
+				width: 80%;
+				height: 2px;
+				border-radius: 10px;
+				margin: 10px auto;
+				background-color: rgba(175, 175, 175, 0.5);
+			}
+			.ip{
+				margin: 10px 20px;
+			}
+			#fish-id{
+				float: left;
+			}
+			.hua{
+				position: relative;
+				left: 8.5px;
+				/* padding: 0 auto; */
+			}
+			.menu-icon-hua{
+				width: 20px;
+				height: auto;
+			}
+			#wal-id{
+				float: right;
+			}
+			
+			/*  导航区域内容 */
+			#nav-content{
+				width: 100%;
+				text-align: center;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				position: absolute;
+				top: 40%;
+			}
+			#nav-content>h1{
+				font-size: 65px;
+				color: white;
+			}
+			.nav-content-rail{
+				width: 100px;
+				height: 4px;
+				text-align: center;
+				background-color: rgba(184, 0, 0, 1.0);
+				
+				position: relative;
+				top: 10px;
+			}
+			
+			/* 导航展开箭头 */
+			.nav-content-icon{
+				width: 100%;
+				position: absolute;
+				bottom: 20px;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.nav-content-icon-ex{
+				width: 50px;
+				height: 50px;
+			}
+			.nav-content-icon-ex:hover>path{
+				width: 50px;
+				height: 50px;
+				fill: rgba(255, 0, 0, 0.5);
+				transition: 0.5s;
+			}
+			.nav-content-icon-ex:active>path{
+				width: 50px;
+				height: 50px;
+				fill: rgba(166, 0, 0, 0.5);
+				transition: 0.5s;
+			}
+			
+			
+			/* 主体内容 */
+			#main-content{
+				width: 100%;
+				background-color: rgba(255, 255, 255, 1);
+				
+				position: absolute;
+				top: 100%;
+				
+				overflow: hidden;
+				clear: both;
+			}
+			
+			/* 角色简介 */
+			#main-wal{
+				margin: 20px 0;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			
+			/* 胡桃政治面貌 */
+			#wal-head{
+				width: 100%;
+				color: black;
+				padding: 90px 0px 40px 0px;
+				
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				/* text-align: center; */
+			}
+			.wal-logo{
+				width: 90px;
+				height: 90px;
+				margin: 0 auto;
+				border-radius: 20px;
+				background-image: url(../img/logo/ht.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.wal-text{
+				width: 150px;
+				font-size: 50px;
+				background-color: rgba(255, 0, 0, 0.3);
+				border-radius: 10px;
+				margin: 20px 0 0 0;
+				
+				text-align: center;
+			}
+			
+			/* 信息条 */
+			#wal-cd{
+				width: 512px;
+				height: 130px;
+				border-radius: 15px;
+				color: rgba(255,0,0,0.8);
+				border: 1px solid red;
+				margin: 20px 0;
+				padding: 10px;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.wal-id,
+			.wal-eye,
+			.wal-Destiny,
+			.wal-title{
+				margin: 0 20px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+			.wal-id:hover #wal-cd-style,
+			.wal-eye:hover #wal-cd-style,
+			.wal-Destiny:hover #wal-cd-style,
+			.wal-title:hover #wal-cd-style{
+				visibility: visible;
+			}
+			#wal-ip{
+				content: "";
+				width: 88px;
+				height: 30px;
+				border-radius: 6px;
+				background-color: rgba(165, 165, 165, 0.4);
+				box-shadow: 3px 3px 5px 1px rgba(186, 0, 0, 0.4);
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#wal-ip::before{
+				content:"";
+				width: 88px;
+				height: 30px;
+				border-radius: 6px;
+				position: absolute;
+				box-shadow: inset -4px 4px 1px 1px rgba(182, 0, 0, 0.9);
+			}
+			#wal-cd-style{
+				content: "";
+				width: 88px;
+				height: 30px;
+				border-radius: 6px;
+				background-color: rgba(165, 165, 165, 0.4);
+				box-shadow: 3px 3px 5px 1px rgba(255, 0, 0, 0.4);
+				
+				position: relative;
+				top: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				visibility: hidden;
+			}
+			#wal-cd-style::before{
+				content:"";
+				width: 88px;
+				height: 30px;
+				border-radius: 6px;
+				position: absolute;
+				box-shadow: inset 4px -4px 1px 1px rgba(194, 0, 0, 0.9);
+			}
+			
+			/* 角色由来 */
+			#wal-name{
+				width: 100%;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.name-head{/* 标题统一 */
+				width: 150px;
+				font-size: 30px;
+				font-weight: 600;
+				background-color: rgba(255, 0, 0, 0.3);
+				border-radius: 10px;
+				
+				text-align: center;
+			}
+			.name-content{
+				height: auto;
+				width: 512px;
+				position: relative;
+				margin: 30px 0 30px 0;
+				padding: 10px;
+				border-radius: 15px;
+				border: 1px solid red;
+				
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+				flex-wrap: wrap;
+				text-overflow: ellipsis;
+			}
+			
+			/* 角色故事 */
+			#wal-story{
+				width: 100%;
+				height: 98vh;
+				margin: 100px 0 0 0;
+				background-color: rgba(234, 234, 234, 0.5);
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.story-head{/* 标题统一 */
+				width: 150px;
+				font-size: 30px;
+				font-weight: 600;
+				background-color: rgba(255, 0, 0, 0.3);
+				border-radius: 10px;
+				
+				text-align: center;
+			}
+			.story-content{
+				width: 512px;
+				height: auto;
+				margin: 100px 0 100px 0;
+				padding: 10px;
+				border-radius: 15px;
+				border: 1px solid red;
+				
+				
+			}
+			
+			/* 角色神之眼 */
+			#wal-about{
+				width: 100%;
+				margin: 110px 0 0 0;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.about-head{/* 标题统一 */
+				width: 150px;
+				font-size: 30px;
+				font-weight: 600;
+				background-color: rgba(255, 0, 0, 0.3);
+				border-radius: 10px;
+				
+				text-align: center;
+			}
+			.about-content{
+				width: 512px;
+				margin: 50px 50px;
+				padding: 10px;
+				border-radius: 15px;
+				border: 1px solid red;
+			}
+			
+			
+			/* 页尾 */
+			footer{	
+				text-align: center;
+				padding: 90px 0 0 0;
+				color: white;
+				margin: auto 0;
+				/* overflow: hidden; text-overflow:ellipsis; white-space: nowrap; */
+				overflow: hidden;
+				transition: 0.5s;
+			}
+			.foot a{
+				height: 15px;
+				color: white;
+				/* padding: 0 0 6px 0; */
+				margin-bottom: 5px;
+				font-size: 12px;
+				border-bottom: 1px solid rgba( 255, 255, 255, 0);
+				clear: both;
+				float:left;
+				
+				transition: 0.3s;
+			}
+			.foot a:hover{
+				border-bottom: 1px solid rgba( 255, 255, 255, 1);
+				/* display: ; */
+			} 
+			.foot a:active{
+				color: rgba(176, 176, 176, 0.8);
+				border-bottom: 1px solid rgba(171, 171, 171, 0.5);
+			}
+			.foot p{
+				padding: 0 0 10px 0 ;
+				white-space: nowrap;
+			}
+			.foot{
+				width: 100%;
+				height: 340px;
+				background: url(../img/background/foot.png) repeat fixed center;
+				background-repeat: no-repeat;/* 方式不重复 */
+				background-size: cover;/* 图片大小覆盖整个网页 */
+			}
+			.foot div{
+				padding: 0 50px;
+				vertical-align: top;
+				display: inline-block;
+				text-align: left;
+			}
+			
+			 
+			
